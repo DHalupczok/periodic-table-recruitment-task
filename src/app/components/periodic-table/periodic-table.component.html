@@ -4,10 +4,6 @@
 </mat-form-field>
 
 <table [dataSource]="elements$" class="mat-elevation-z8" mat-table>
-  <ng-container matColumnDef="id">
-    <th *matHeaderCellDef mat-header-cell> No.</th>
-    <td *matCellDef="let element" mat-cell> {{ element.position }}</td>
-  </ng-container>
   <!-- No Column -->
   <ng-container matColumnDef="position">
     <th *matHeaderCellDef mat-header-cell> No.</th>

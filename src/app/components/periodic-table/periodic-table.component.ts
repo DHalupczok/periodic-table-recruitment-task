@@ -45,7 +45,7 @@ export class PeriodicTableComponent implements OnInit {
       element.name.toLowerCase().includes(state.filterValue.toLowerCase()) ||
       element.symbol.toLowerCase().includes(state.filterValue.toLowerCase()) ||
       element.position.toString().includes(state.filterValue) ||
-      element.weight.toString().includes(state.filterValue))
+      element.weight.toString().includes(state.filterValue)).sort((a, b) => a.position - b.position)
   }))
   private dialog = inject(MatDialog)
 
@@ -64,7 +64,10 @@ export class PeriodicTableComponent implements OnInit {
 
     dialogRef.afterClosed().subscribe(result => {
       if (result) {
-        this.state.set({elements: this.state.get().elements.map(el => el.position === row.position ? result : el)});
+        this.state.set({
+          elements: this.state.get().elements.map(el => el.id
+          === row.id ? result : el)
+        });
       }
     });
   }
