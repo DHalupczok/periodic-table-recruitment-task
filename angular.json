@@ -52,8 +52,10 @@
                 "glob": "**/*",
                 "input": "public"
               }
+
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/azure-blue.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -113,6 +115,7 @@
               }
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/azure-blue.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -120,5 +123,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "df8506d4-4f76-4ce6-a7cc-cac57b539420"
   }
 }
